@@ -1,0 +1,714 @@
+body {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(241, 232, 228, 1);
+    background-size: cover;
+    animation: transition-fade-out 2s ease; 
+}
+
+@keyframes transition-fade-out {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+.sections-container {
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    background-color: rgba(31, 31, 31, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    z-index: 1000;
+}
+
+.sections { 
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.sections a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url("BebasNeue-Regular.ttf") format('truetype');
+}
+
+.h1 { 
+    font-family: 'Bebas Neue', serif;
+    margin-right: 20%;
+    padding-top: 0.4%;
+    padding-bottom: 0.3%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding-left: 0.9%;
+    padding-right: 1.3%;
+    border-radius: 5px;
+    font-size: 2vw;
+    font-weight: lighter;
+    color: white;
+    margin-left: 2%;
+}
+
+.h2 {
+    padding-left: 3%;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: #EA3838;
+}
+
+.home, .menu, .about, .contact, .testimonials {
+    font-family:'Montserrat', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 300;
+    color: #ffffff;
+    border-bottom: 2px solid #1E1E1E;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.home:hover, .menu:hover, .about:hover, .contact:hover, .testimonials:hover {
+    border-bottom-color: #EA3838;
+    transition: 0.9s ease;
+}
+
+.menu_container {
+    background-color: rgba(241, 232, 228, 1);
+    background-size: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 8%;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url("PublicSans-VariableFont_wght.ttf") format('truetype');
+}
+
+.fullmenu_headingtxt {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 4vw;
+    text-align: center;
+    animation: slideIn 1s ease;
+}
+
+.food_img img, .food_img{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    padding-left: 1.5%;
+    padding-top: 1.3%;
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+.texts {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.text1 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 3vw;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: -5%;
+}
+
+.text2 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.9vw;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.8);
+    margin-right: -5%;
+    margin-top: 3%;
+}
+
+.learnmorebtn {
+    background-color: rgba(241, 232, 228, 1);
+    border: 1px solid rgba(51, 51, 51, 1);
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.8vw;
+    font-weight: 200;
+    padding-top: 1.3%;
+    padding-bottom: 1.3%;
+    padding-left: 2.8%;
+    padding-right: 2.8%;
+    border-radius: 50px;
+    margin-left: 5%;
+}
+
+.learnmorebtn:hover {
+    background-color: #1E1E1E;
+    transition: 0.5s ease;
+    color: rgba(241, 232, 228, 1);
+    
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease, transform 0.5s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wrapper {
+    background-color: rgba(241, 232, 228, 1);
+    max-width: 100%;
+    width: cover;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    
+}
+
+.popular {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 4.5vw;
+    font-weight: 700;
+    color: rgba(31, 31, 31, 0.8);
+    margin-left: 10%;
+}
+
+.wrapper i{
+    width: 5%;
+    height: 5%;
+    cursor: pointer;
+    color: rgba(121, 121, 121, 1);
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    font-size: 3vw;
+}
+
+.wrapper i:first-child {
+    left: 1%;
+}
+
+.wrapper i:last-child {
+    right: -3%;
+}
+
+.wrapper .swiper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3)-12px);
+    gap: 17px;
+    overflow-x: auto;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    cursor: pointer;
+    margin-left: 4%;
+    margin-right: 5%;
+    scroll-behavior: smooth;
+    margin-bottom: -4.8%;
+    margin-top: -4.8%;
+}
+
+.swiper::-webkit-scrollbar {
+    display: none;
+}
+
+.swiper :where(.class_foods, .foods) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.swiper.no-transition {
+    scroll-behavior: auto;
+}
+
+.swiper.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.swiper.dragging .class_foods {
+    cursor: grab;
+    user-select: none;
+}
+
+.swiper  .class_foods {
+    position: relative;
+    scroll-snap-align: start;
+    list-style: none;
+    background-color: rgba(31, 31, 31, 0.8);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 2%;
+}
+
+.class_foods .foods img {
+    width: 291px;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes glow {
+    50% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+
+.food_name {
+    font-family: 'Bebas Neue', serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 13%;
+    animation: glow 2500ms linear infinite 2000ms;
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 1);
+    margin-top: -5%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.rating {
+    max-width: 100%;
+    display: flex;
+    margin-left: -70%;
+    height: auto;
+    width: 10%;
+    transform: translateY(500%);
+}
+
+.rating img {
+    opacity: 1; 
+    animation: glow-img 2500ms linear infinite 2000ms;
+}
+
+@keyframes glow-img {
+    50% {
+        box-shadow: 0 0 100px rgb(238, 255, 0);
+        background: rgba(238, 255, 0, 0.315);
+        border: none;
+    }
+}
+
+.price {
+    font-family: 'Bebas Neue', serif;
+    color: rgba(255, 255, 255, 1);
+    word-spacing: 100%;
+    font-size: 1.5vw;
+    margin-right: -70%;
+    font-weight: 200;
+    margin-top: -7%;
+    transform: translateY(500%);
+    margin-bottom: 10%;
+    animation: glow 2500ms linear infinite 2000ms;
+}
+
+.class_foods:hover .rating,
+.class_foods:hover .price {
+    transition: transform 0.5s ease;
+}
+
+.class_foods:hover .food_name,
+.class_foods:hover .description {
+    transition: transform 0.5s ease; 
+}
+
+.class_foods:hover .foods img{
+    transition: 0.5s ease;
+    opacity: 0.5;
+}
+
+.class_foods:hover .rating img {
+    opacity: 1; 
+}
+
+.for_reveal2 {
+    margin-top: 13%;
+}
+
+.for_reveal3 {
+    margin-top: 13%;
+}
+
+.menu_contents2 {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 12%;
+    display: flex;
+    overflow: hidden;
+}
+
+.menu_contents2 li {
+    margin-left: 10%;
+    margin-top: 6%;
+}
+
+.texthead {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: rgba(31, 31, 31, 1);
+    list-style: none;
+}
+ 
+.textsbelow {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 2vw;
+    font-weight: 200;
+    color: rgba(31, 31, 31, 1);
+    margin-top: -0.1%;
+    margin-left: 0.6%;
+}
+
+.order_tab {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1.8vw;
+    padding-top: 2.7%;
+    padding-bottom: 2.7%;
+    padding-left: 6%;
+    padding-right: 6%;
+    color: #FFFFFFCC;
+    background-color: #1F1F1F;
+    border: 1px solid #1F1F1F;
+    text-decoration: none;
+    margin-left: 0.7%;
+    z-index: 2;
+    border-radius: 25px;
+}
+
+.order_tab:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.email_us {
+    display: flex;
+    justify-content: center;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: rgba(31, 31, 31, 1);
+    margin-top: 1%;
+    margin-bottom: -10%
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding-top: 5%;
+    margin-top: 10%;
+    margin-bottom: -0.2%;
+}
+
+.contact_info {
+    margin-left: -15%;
+    font-family: 'Bebas Neue', serif;
+    font-size: 2.4vw;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: -2%;
+ }
+ 
+ .contact_info, .email_and_phone {
+     list-style: none;;
+ }
+ 
+ .contact_infotxt1,
+ .contact_infotxt2,
+ .contact_infotxt3,
+ .contact_infotxt4 {
+     display: flex; 
+     align-items: center; 
+     font-family: 'Public Sans', sans-serif;
+     font-size: 1.2vw;
+     font-weight: 200;
+     color: rgba(0, 0, 0, 1);
+ }
+ 
+ .contact_infotxt1 img,
+ .contact_infotxt2 img,
+ .contact_infotxt3 img,
+ .contact_infotxt4 img {
+     width: 7%;
+     margin-right: 2%
+ }
+ 
+ .contact_infotxt1 img,
+ .contact_infotxt2 img {
+     margin-top: -2%;
+ }
+ 
+.email_and_phone {
+    margin-top: 1%;
+    margin-left: -20%;
+}
+
+.more {
+    background-color: white;
+    display: flex;
+    justify-content: right;
+}
+
+.moretxt {
+    max-width: 100%;
+    font-family: 'Public Sana', sans-serif;
+    font-size: 1.1vw;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(217, 217, 217, 1);
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 6%;
+    padding-right: 6%;
+    text-decoration: none;
+}
+
+.moretxt:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease;
+}
+
+.copyright {
+   max-width: 100%;
+   display: flex;
+   justify-content: center;
+   background-color: #1E1E1E;
+}
+
+.copyrighttxt {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 600px) {
+    .h1 {
+        margin-left: -1.5%;
+        border: 1px solid white;
+    }
+
+    .home, .menu, .about, .contact, .testimonials {
+        font-size: 2vw;
+    }
+
+    .contact_infotxt1 img,
+    .contact_infotxt2 img,
+    .contact_infotxt3 img,
+    .contact_infotxt4 img {
+       width: 5%;
+       height: auto;
+    }
+
+    .fullmenu_headingtxt  {
+        margin-top: 10%;
+    }
+
+    .swiper  .class_foods {
+        position: relative;
+        scroll-snap-align: start;
+        list-style: none;
+        background-color: rgba(31, 31, 31, 0.8);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 2%;
+    }
+    
+    .class_foods .foods img {
+        width: 150px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .food_name {
+        font-family: 'Bebas Neue', serif;
+        font-size: 3vw;
+    }
+    
+    .description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5vw;
+    }
+    
+    .rating {
+        width: 10%;
+        transform: translateY(500%);
+    }
+    
+    .price {
+        font-family: 'Bebas Neue', serif;
+        color: rgba(255, 255, 255, 1);
+        word-spacing: 100%;
+        font-size: 3vw;
+        margin-right: -70%;
+        font-weight: 200;
+        margin-top: -11%;
+        transform: translateY(500%);
+        margin-bottom: 10%;
+        animation: glow 2500ms linear infinite 2000ms;
+    }
+
+    .order_tab {
+        font-size: 2.3vw;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu_contents2 img {
+        width: 50%;
+    }
+
+    .contact_info {
+        margin-left: -25px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .h1 {
+        margin-left: -1.5%;
+        border: 1px solid white;
+    }
+
+    .home, .menu, .about, .contact, .testimonials {
+        font-size: 1.5vw;
+    }
+
+    .contact_infotxt1 img,
+    .contact_infotxt2 img,
+    .contact_infotxt3 img,
+    .contact_infotxt4 img {
+       width: 5%;
+       height: auto;
+    }
+
+    .fullmenu_headingtxt  {
+        margin-top: 10%;
+    }
+
+    .swiper  .class_foods {
+        position: relative;
+        scroll-snap-align: start;
+        list-style: none;
+        background-color: rgba(31, 31, 31, 0.8);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 2%;
+    }
+    
+    .class_foods .foods img {
+        width: 150px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .food_name {
+        font-family: 'Bebas Neue', serif;
+        font-size: 3vw;
+    }
+    
+    .description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5vw;
+    }
+    
+    .rating {
+        width: 10%;
+        transform: translateY(500%);
+    }
+    
+    .price {
+        font-family: 'Bebas Neue', serif;
+        color: rgba(255, 255, 255, 1);
+        word-spacing: 100%;
+        font-size: 3vw;
+        margin-right: -70%;
+        font-weight: 200;
+        margin-top: -11%;
+        transform: translateY(500%);
+        margin-bottom: 10%;
+        animation: glow 2500ms linear infinite 2000ms;
+    }
+
+    .order_tab {
+        font-size: 2.3vw;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu_contents2 img {
+        width: 50%;
+    }
+
+    .contact_info {
+        margin-left: -25px;
+    }
+    
+}
