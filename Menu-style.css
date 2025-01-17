@@ -7,6 +7,10 @@ body {
     animation: transition-fade-out 2s ease; 
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 @keyframes transition-fade-out {
     from {
         opacity: 0;
